@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tap2Meet Terms of Use</title>
+  <meta name="description" content="Terms of Use for Tap2Meet iOS app." />
+  <style>
+    :root {
+      --bg: #fff7f4;
+      --card: rgba(255, 255, 255, 0.84);
+      --text: #251f24;
+      --muted: #6f626a;
+      --line: rgba(120, 70, 80, 0.14);
+      --accent: #ff5f6d;
+      --accent-2: #ff9966;
+      --shadow: 0 20px 60px rgba(255, 95, 109, 0.16);
+      --radius: 28px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 5%, rgba(255, 153, 102, 0.28), transparent 32%),
+        radial-gradient(circle at 88% 12%, rgba(255, 95, 109, 0.24), transparent 35%),
+        linear-gradient(180deg, #fff7f4 0%, #fffdfb 55%, #fff7f4 100%);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 650;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .page {
+      width: min(980px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 56px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 0 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      font-size: 22px;
+    }
+
+    .logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 12px 30px rgba(255, 95, 109, 0.28);
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      font-size: 14px;
+    }
+
+    .hero {
+      border: 1px solid var(--line);
+      border-radius: 36px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.92), rgba(255,250,248,0.76)),
+        radial-gradient(circle at 80% 20%, rgba(255, 95, 109, 0.20), transparent 30%);
+      box-shadow: var(--shadow);
+      padding: clamp(32px, 6vw, 64px);
+      margin-bottom: 22px;
+    }
+
+    .badge {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 95, 109, 0.10);
+      color: #b93747;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(40px, 7vw, 68px);
+      line-height: 0.98;
+      letter-spacing: -0.07em;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 20px);
+    }
+
+    .section {
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+      box-shadow: 0 12px 36px rgba(52, 31, 36, 0.06);
+      padding: 26px;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .section h2 {
+      margin: 0 0 10px;
+      font-size: 25px;
+      letter-spacing: -0.035em;
+    }
+
+    .section h3 {
+      margin: 22px 0 8px;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+    }
+
+    .section p, .section li {
+      color: var(--muted);
+    }
+
+    .section ul {
+      margin: 12px 0 0;
+      padding-left: 20px;
+    }
+
+    .section li { margin: 8px 0; }
+
+    .contact-box {
+      padding: 18px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(255, 95, 109, 0.10), rgba(255, 153, 102, 0.10));
+      border: 1px solid rgba(255, 95, 109, 0.16);
+      margin-top: 14px;
+    }
+
+    .footer {
+      margin-top: 28px;
+      padding: 20px 4px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .page { width: min(100% - 22px, 980px); padding-top: 14px; }
+      .nav { align-items: flex-start; flex-direction: column; padding-bottom: 18px; }
+      .nav-links { justify-content: flex-start; gap: 12px; }
+      .hero { border-radius: 30px; padding: 30px 22px; }
+      .section { padding: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <nav class="nav" aria-label="Main navigation">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">♥</div>
+        <span>Tap2Meet</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="badge">Terms of Use</div>
+      <h1>Clear rules for using Tap2Meet safely and respectfully.</h1>
+      <p>
+        These Terms explain your rights and responsibilities when using the Tap2Meet iOS app.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Terms of Use for Tap2Meet</h2>
+      <p><strong>Effective date:</strong> May 2, 2026</p>
+      <p>
+        These Terms of Use govern your use of Tap2Meet, an iOS app designed for quick in-person introductions
+        and selected contact sharing.
+      </p>
+      <p>
+        By using Tap2Meet, you agree to these Terms. If you do not agree, please do not use the app.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>About Tap2Meet</h2>
+      <p>
+        Tap2Meet helps users prepare a meeting screen, contact card, QR code, or short custom scenario
+        for in-person introductions.
+      </p>
+      <p>
+        Tap2Meet is not an online dating network, does not provide online matching, and does not guarantee
+        any relationship, meeting outcome, response, or interaction result.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Your responsibility</h2>
+      <p>You are responsible for how you use Tap2Meet, including:</p>
+      <ul>
+        <li>The information you enter into the app.</li>
+        <li>The contact details you choose to show or share.</li>
+        <li>Your in-person interactions with other people.</li>
+        <li>Complying with applicable laws and respecting other people’s boundaries and privacy.</li>
+      </ul>
+      <p>
+        Only share contact information with people you trust.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Acceptable use</h2>
+      <p>You agree not to use Tap2Meet to:</p>
+      <ul>
+        <li>Harass, threaten, abuse, impersonate, or mislead another person.</li>
+        <li>Share illegal, harmful, hateful, or sexually exploitative content.</li>
+        <li>Violate another person’s privacy or rights.</li>
+        <li>Use the app for spam, fraud, scams, or deceptive activity.</li>
+        <li>Attempt to reverse engineer, damage, overload, or interfere with the app.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Personal safety</h2>
+      <p>
+        Tap2Meet is a tool for presenting and exchanging selected contact information.
+        It does not verify the identity, intentions, or background of people you meet.
+      </p>
+      <p>
+        You are responsible for your own safety during in-person interactions.
+        Use common sense, meet in safe environments, and stop any interaction that makes you uncomfortable.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Subscriptions and Pro features</h2>
+      <p>
+        Tap2Meet may offer optional Pro features through auto-renewable subscriptions or other in-app purchases.
+        Prices, durations, and available features are shown in the app before purchase.
+      </p>
+
+      <h3>Billing</h3>
+      <p>
+        Payments are charged to your Apple ID account through the App Store.
+        Subscriptions automatically renew unless canceled at least 24 hours before the end of the current billing period.
+      </p>
+
+      <h3>Managing or canceling</h3>
+      <p>
+        You can manage or cancel subscriptions in your Apple ID subscription settings.
+        Deleting the app does not automatically cancel an active subscription.
+      </p>
+
+      <h3>Restore purchases</h3>
+      <p>
+        If you purchased Tap2Meet Pro and need to restore access, use the “Restore Purchases” option inside the app.
+      </p>
+
+      <h3>Refunds</h3>
+      <p>
+        Refund requests for App Store purchases are handled by Apple according to Apple’s policies.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Privacy</h2>
+      <p>
+        Your use of Tap2Meet is also governed by our Privacy Policy.
+      </p>
+      <p>
+        <a href="privacy.html">Read the Tap2Meet Privacy Policy</a>
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>App availability and changes</h2>
+      <p>
+        We may update, change, suspend, or discontinue parts of Tap2Meet at any time.
+        We may also modify, add, or remove features to improve the app, fix issues, comply with requirements,
+        or adjust the product.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>No warranties</h2>
+      <p>
+        Tap2Meet is provided “as is” and “as available.”
+        We do not guarantee that the app will always be available, error-free, uninterrupted, or suitable for every situation.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Limitation of liability</h2>
+      <p>
+        To the maximum extent permitted by law, Tap2Meet and its developer are not liable for indirect, incidental,
+        special, consequential, or punitive damages, or for any loss resulting from your use of the app,
+        your shared contact information, or your in-person interactions.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Changes to these Terms</h2>
+      <p>
+        We may update these Terms from time to time. When we do, we will update the effective date on this page.
+        Continued use of Tap2Meet after changes means you accept the updated Terms.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Contact</h2>
+      <p>
+        If you have questions about these Terms, contact us:
+      </p>
+
+      <div class="contact-box">
+        <p><strong>Email:</strong> <a href="mailto:developtonyt@icloud.com">developtonyt@icloud.com</a></p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      © 2026 Tap2Meet. All rights reserved.
+    </footer>
+  </main>
+</body>
+</html>
