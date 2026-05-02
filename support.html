@@ -5,27 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tap2Meet Support</title>
   <meta name="description" content="Support page for Tap2Meet, an iOS app for quick in-person introductions and contact exchange." />
+
   <style>
     :root {
       --bg: #fff7f4;
-      --bg-soft: #fffaf8;
-      --card: rgba(255, 255, 255, 0.82);
+      --card: rgba(255, 255, 255, 0.84);
       --text: #251f24;
       --muted: #6f626a;
       --line: rgba(120, 70, 80, 0.14);
       --accent: #ff5f6d;
       --accent-2: #ff9966;
-      --accent-3: #ffcad4;
       --shadow: 0 20px 60px rgba(255, 95, 109, 0.16);
       --radius: 28px;
     }
 
     * {
       box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
@@ -37,7 +32,7 @@
         radial-gradient(circle at 88% 12%, rgba(255, 95, 109, 0.24), transparent 35%),
         linear-gradient(180deg, #fff7f4 0%, #fffdfb 55%, #fff7f4 100%);
       min-height: 100vh;
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
     a {
@@ -73,17 +68,18 @@
       font-size: 22px;
     }
 
-    .logo {
-      width: 44px;
-      height: 44px;
+    .logo-img {
+      width: 44px !important;
+      height: 44px !important;
+      min-width: 44px !important;
+      max-width: 44px !important;
+      min-height: 44px !important;
+      max-height: 44px !important;
       border-radius: 14px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: 0 12px 30px rgba(255, 95, 109, 0.28);
-      display: grid;
-      place-items: center;
-      color: white;
-      font-size: 22px;
-      font-weight: 900;
+      object-fit: cover;
+      display: block;
+      flex-shrink: 0;
+      box-shadow: 0 12px 30px rgba(255, 95, 109, 0.22);
     }
 
     .nav-links {
@@ -95,8 +91,6 @@
     }
 
     .hero {
-      position: relative;
-      overflow: hidden;
       border: 1px solid var(--line);
       border-radius: 36px;
       background:
@@ -108,8 +102,6 @@
 
     .badge {
       display: inline-flex;
-      align-items: center;
-      gap: 8px;
       padding: 8px 12px;
       border-radius: 999px;
       background: rgba(255, 95, 109, 0.10);
@@ -194,15 +186,14 @@
       letter-spacing: -0.02em;
     }
 
-    .section p {
-      margin: 8px 0;
+    .section p,
+    .section li {
       color: var(--muted);
     }
 
     .section ul {
       margin: 12px 0 0;
       padding-left: 20px;
-      color: var(--muted);
     }
 
     .section li {
@@ -302,10 +293,9 @@
       </div>
 
       <div class="nav-links">
-        <a href="#support">Support</a>
-        <a href="#faq">FAQ</a>
-        <a href="#subscriptions">Subscriptions</a>
-        <a href="#privacy">Privacy</a>
+        <a href="support.html">Support</a>
+        <a href="https://tonytyap.github.io/tap2meet/privacy.html">Privacy</a>
+        <a href="https://tonytyap.github.io/tap2meet/terms.html">Terms</a>
       </div>
     </nav>
 
@@ -452,15 +442,9 @@
         exchanging information, but you remain responsible for your own in-person interactions.
       </p>
 
-      <h3>Privacy Policy</h3>
       <p>
-        A dedicated Privacy Policy should be published separately and added to App Store Connect as
-        the Privacy Policy URL.
-      </p>
-
-      <p>
-        <a href="/privacy.html">Privacy Policy</a> ·
-        <a href="/terms.html">Terms of Use</a>
+        <a href="https://tonytyap.github.io/tap2meet/privacy.html">Privacy Policy</a> ·
+        <a href="https://tonytyap.github.io/tap2meet/terms.html">Terms of Use</a>
       </p>
 
       <div class="legal-note">
