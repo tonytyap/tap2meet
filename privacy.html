@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tap2Meet Privacy Policy</title>
   <meta name="description" content="Privacy Policy for Tap2Meet iOS app." />
+
   <style>
     :root {
       --bg: #fff7f4;
@@ -18,7 +19,9 @@
       --radius: 28px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -38,7 +41,9 @@
       font-weight: 650;
     }
 
-    a:hover { text-decoration: underline; }
+    a:hover {
+      text-decoration: underline;
+    }
 
     .page {
       width: min(980px, calc(100% - 32px));
@@ -63,17 +68,18 @@
       font-size: 22px;
     }
 
-    .logo {
-      width: 44px;
-      height: 44px;
+    .logo-img {
+      width: 44px !important;
+      height: 44px !important;
+      min-width: 44px !important;
+      max-width: 44px !important;
+      min-height: 44px !important;
+      max-height: 44px !important;
       border-radius: 14px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: 0 12px 30px rgba(255, 95, 109, 0.28);
-      display: grid;
-      place-items: center;
-      color: white;
-      font-size: 22px;
-      font-weight: 900;
+      object-fit: cover;
+      display: block;
+      flex-shrink: 0;
+      box-shadow: 0 12px 30px rgba(255, 95, 109, 0.22);
     }
 
     .nav-links {
@@ -144,7 +150,8 @@
       letter-spacing: -0.02em;
     }
 
-    .section p, .section li {
+    .section p,
+    .section li {
       color: var(--muted);
     }
 
@@ -153,7 +160,9 @@
       padding-left: 20px;
     }
 
-    .section li { margin: 8px 0; }
+    .section li {
+      margin: 8px 0;
+    }
 
     .contact-box {
       padding: 18px;
@@ -172,11 +181,30 @@
     }
 
     @media (max-width: 760px) {
-      .page { width: min(100% - 22px, 980px); padding-top: 14px; }
-      .nav { align-items: flex-start; flex-direction: column; padding-bottom: 18px; }
-      .nav-links { justify-content: flex-start; gap: 12px; }
-      .hero { border-radius: 30px; padding: 30px 22px; }
-      .section { padding: 22px; }
+      .page {
+        width: min(100% - 22px, 980px);
+        padding-top: 14px;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding-bottom: 18px;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+        gap: 12px;
+      }
+
+      .hero {
+        border-radius: 30px;
+        padding: 30px 22px;
+      }
+
+      .section {
+        padding: 22px;
+      }
     }
   </style>
 </head>
