@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tap2Meet Support</title>
+  <meta name="description" content="Support page for Tap2Meet, an iOS app for quick in-person introductions and contact exchange." />
+  <style>
+    :root {
+      --bg: #fff7f4;
+      --bg-soft: #fffaf8;
+      --card: rgba(255, 255, 255, 0.82);
+      --text: #251f24;
+      --muted: #6f626a;
+      --line: rgba(120, 70, 80, 0.14);
+      --accent: #ff5f6d;
+      --accent-2: #ff9966;
+      --accent-3: #ffcad4;
+      --shadow: 0 20px 60px rgba(255, 95, 109, 0.16);
+      --radius: 28px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 5%, rgba(255, 153, 102, 0.28), transparent 32%),
+        radial-gradient(circle at 88% 12%, rgba(255, 95, 109, 0.24), transparent 35%),
+        linear-gradient(180deg, #fff7f4 0%, #fffdfb 55%, #fff7f4 100%);
+      min-height: 100vh;
+      line-height: 1.55;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 650;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 56px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 0 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      font-size: 22px;
+    }
+
+    .logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 12px 30px rgba(255, 95, 109, 0.28);
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      font-size: 14px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 36px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.92), rgba(255,250,248,0.76)),
+        radial-gradient(circle at 80% 20%, rgba(255, 95, 109, 0.20), transparent 30%);
+      box-shadow: var(--shadow);
+      padding: clamp(32px, 6vw, 72px);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 95, 109, 0.10);
+      color: #b93747;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 0.95;
+      letter-spacing: -0.07em;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 21px);
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 999px;
+      font-weight: 750;
+      border: 1px solid transparent;
+    }
+
+    .button-primary {
+      color: white;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 14px 30px rgba(255, 95, 109, 0.24);
+    }
+
+    .button-secondary {
+      color: var(--text);
+      background: rgba(255,255,255,0.74);
+      border-color: var(--line);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .section {
+      margin-top: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+      box-shadow: 0 12px 36px rgba(52, 31, 36, 0.06);
+      padding: 26px;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .section h2 {
+      margin: 0 0 10px;
+      font-size: 25px;
+      letter-spacing: -0.035em;
+    }
+
+    .section h3 {
+      margin: 22px 0 8px;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+    }
+
+    .section p {
+      margin: 8px 0;
+      color: var(--muted);
+    }
+
+    .section ul {
+      margin: 12px 0 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .section li {
+      margin: 8px 0;
+    }
+
+    .mini-card {
+      border-radius: 22px;
+      background: rgba(255,255,255,0.70);
+      border: 1px solid var(--line);
+      padding: 20px;
+    }
+
+    .mini-card strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 16px;
+    }
+
+    .mini-card span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(255, 95, 109, 0.10), rgba(255, 153, 102, 0.10));
+      border: 1px solid rgba(255, 95, 109, 0.16);
+      margin-top: 14px;
+    }
+
+    .contact-box p {
+      margin: 0;
+    }
+
+    .footer {
+      margin-top: 28px;
+      padding: 20px 4px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .legal-note {
+      font-size: 13px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      margin-top: 20px;
+      padding-top: 16px;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 22px, 1080px);
+        padding-top: 14px;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding-bottom: 18px;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+        gap: 12px;
+      }
+
+      .hero {
+        border-radius: 30px;
+        padding: 30px 22px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <nav class="nav" aria-label="Main navigation">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">♥</div>
+        <span>Tap2Meet</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="#support">Support</a>
+        <a href="#faq">FAQ</a>
+        <a href="#subscriptions">Subscriptions</a>
+        <a href="#privacy">Privacy</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="badge">Tap2Meet Support</div>
+      <h1>Simple help for better live introductions.</h1>
+      <p>
+        Tap2Meet helps you start an in-person introduction, share selected contact details,
+        show a QR code, or guide someone through a short custom meeting scenario.
+      </p>
+
+      <div class="cta-row">
+        <a class="button button-primary" href="mailto:developtonyt@icloud.com?subject=Tap2Meet%20Support%20Request">
+          Contact Support
+        </a>
+        <a class="button button-secondary" href="#faq">
+          Read FAQ
+        </a>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Support highlights">
+      <div class="mini-card">
+        <strong>Fast help</strong>
+        <span>Email us with your issue, device model, iOS version, and app version if possible.</span>
+      </div>
+
+      <div class="mini-card">
+        <strong>Privacy-first</strong>
+        <span>Tap2Meet is designed for in-person use and stores app data locally on your device.</span>
+      </div>
+
+      <div class="mini-card">
+        <strong>Subscriptions</strong>
+        <span>You can manage or cancel subscriptions directly through your Apple ID settings.</span>
+      </div>
+    </section>
+
+    <section id="support" class="section">
+      <h2>Contact support</h2>
+      <p>
+        Need help with Tap2Meet? Send us an email and describe what happened.
+        We will review your message and respond as soon as reasonably possible.
+      </p>
+
+      <div class="contact-box">
+        <p><strong>Email:</strong> <a href="mailto:developtonyt@icloud.com">developtonyt@icloud.com</a></p>
+        <a class="button button-primary" href="mailto:developtonyt@icloud.com?subject=Tap2Meet%20Support%20Request">
+          Email Support
+        </a>
+      </div>
+
+      <h3>What to include in your message</h3>
+      <ul>
+        <li>The issue you experienced.</li>
+        <li>Your iPhone model and iOS version.</li>
+        <li>The Tap2Meet app version, if available.</li>
+        <li>Steps to reproduce the issue, if the issue happens repeatedly.</li>
+        <li>Screenshots or screen recordings, if they help explain the problem.</li>
+      </ul>
+    </section>
+
+    <section id="faq" class="section">
+      <h2>Frequently asked questions</h2>
+
+      <h3>What is Tap2Meet?</h3>
+      <p>
+        Tap2Meet is an iOS app for quick, in-person introductions. You can prepare your profile,
+        choose which contact details to show, select a meeting screen, and share a contact card,
+        QR code, or handle during a real-life interaction.
+      </p>
+
+      <h3>Is Tap2Meet an online dating network?</h3>
+      <p>
+        No. Tap2Meet is designed as a live, in-person introduction tool. It does not create a public
+        dating profile, does not match users online, and does not provide random chat.
+      </p>
+
+      <h3>Where is my information stored?</h3>
+      <p>
+        Tap2Meet is designed to keep profile and scenario settings on your device. If meeting history
+        is enabled, recent meeting data is stored locally on your device and protected with encryption.
+      </p>
+
+      <h3>Can I delete my data?</h3>
+      <p>
+        Yes. You can delete app data from within the app settings where the delete/reset option is provided.
+        You can also delete the app from your device to remove locally stored app data.
+      </p>
+
+      <h3>Why does Tap2Meet ask for photo access?</h3>
+      <p>
+        Photo access is used only when you choose to add or update a profile photo inside the app.
+      </p>
+
+      <h3>Does Tap2Meet post to my social accounts?</h3>
+      <p>
+        No. Tap2Meet may help you display or share selected contact information, but it does not post
+        content to your social accounts.
+      </p>
+    </section>
+
+    <section id="subscriptions" class="section">
+      <h2>Subscriptions and purchases</h2>
+      <p>
+        Tap2Meet may offer optional Pro features through auto-renewable subscriptions.
+        Available plans, prices, trial availability, and billing terms are shown inside the app before purchase.
+      </p>
+
+      <h3>Managing subscriptions</h3>
+      <p>
+        Purchases are processed by Apple. You can manage, cancel, or review your subscription in your
+        Apple ID subscription settings.
+      </p>
+
+      <h3>Restore purchases</h3>
+      <p>
+        If you already purchased Tap2Meet Pro, use the “Restore Purchases” option inside the app.
+        Make sure you are signed in with the same Apple ID used for the original purchase.
+      </p>
+
+      <h3>Refunds</h3>
+      <p>
+        Refund requests for App Store purchases are handled by Apple according to Apple’s policies.
+      </p>
+    </section>
+
+    <section id="privacy" class="section">
+      <h2>Privacy and safety</h2>
+      <p>
+        Tap2Meet is built for simple in-person contact sharing. You control which details you add
+        and which details you choose to show during a meeting flow.
+      </p>
+
+      <h3>Personal information</h3>
+      <p>
+        The app may store information you enter, such as your name, selected contact details,
+        profile photo, scenario settings, and recent meeting history if enabled.
+      </p>
+
+      <h3>Safety reminder</h3>
+      <p>
+        Only share contact information with people you trust. Tap2Meet is a tool for presenting and
+        exchanging information, but you remain responsible for your own in-person interactions.
+      </p>
+
+      <h3>Privacy Policy</h3>
+      <p>
+        A dedicated Privacy Policy should be published separately and added to App Store Connect as
+        the Privacy Policy URL.
+      </p>
+
+      <p>
+        <a href="/privacy.html">Privacy Policy</a> ·
+        <a href="/terms.html">Terms of Use</a>
+      </p>
+
+      <div class="legal-note">
+        This support page is provided for Tap2Meet users. It is not a substitute for the full Privacy Policy
+        or Terms of Use. Last updated: May 2, 2026.
+      </div>
+    </section>
+
+    <footer class="footer">
+      © 2026 Tap2Meet. All rights reserved.
+    </footer>
+  </main>
+</body>
+</html>
